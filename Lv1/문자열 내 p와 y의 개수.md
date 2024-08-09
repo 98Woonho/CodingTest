@@ -6,8 +6,8 @@
 예를 들어 `s`가 `pPoooyY`면 `true`를 return하고 `Pyy`라면 `false`를 return합니다.
 
 ## 제한 사항
-- 문자열 s의 길이 : 50 이하의 자연수
-- 문자열 s는 알파벳으로만 이루어져 있습니다.
+- 문자열 `s`의 길이 : 50 이하의 자연수
+- 문자열 `s`는 알파벳으로만 이루어져 있습니다.
 
 ## 코드
 ```java
@@ -15,7 +15,7 @@ import java.util.*;
 
 class Solution {
     boolean solution(String s) {
-        char[] arr = s.toCharArray();
+        char[] arr = s.toCharArray(); // 문자열을 문자 배열로 변환
         
         int pCount = 0;
         int yCount = 0;
