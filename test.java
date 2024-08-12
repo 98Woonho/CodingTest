@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalInt;
+import java.util.*;
 
 public class test {
     public static void main(String[] args) {
@@ -17,5 +14,8 @@ public class test {
         int[] answer = list.stream().mapToInt(Integer::intValue).toArray();
 
         String b = "abc";
+
+
+        Set<Integer> hs = new HashSet<>();
     }
 }
