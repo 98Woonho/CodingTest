@@ -18,6 +18,6 @@ public class test {
 
         Set<Integer> hs = new HashSet<>();
 
-        b.replace
+        HashMap<String, Integer> hashMap = new HashMap<>();
     }
 }
