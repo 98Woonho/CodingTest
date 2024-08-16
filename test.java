@@ -1,23 +1,17 @@
 import java.util.*;
 
+import static java.util.Arrays.asList;
+
 public class test {
     public static void main(String[] args) {
-        int[] a = {1,2,3,4,5};
+        int[][] arr = {{1,2,3}};
 
-        List<Integer> list = new ArrayList<Integer>();
+        int num = 1;
 
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
+        List<int[]> list1 = new ArrayList<>();
 
-        int[] answer = list.stream().mapToInt(Integer::intValue).toArray();
+        List<int[]> list = new ArrayList<>(Arrays.asList(arr));
 
-        String b = "abc";
-
-
-        Set<Integer> hs = new HashSet<>();
-
-        HashMap<String, Integer> hashMap = new HashMap<>();
+        list.sort(Comparator.comparingInt(a -> a[num]));
     }
 }
