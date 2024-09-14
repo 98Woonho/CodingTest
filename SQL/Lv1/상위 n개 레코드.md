@@ -33,10 +33,9 @@
 ※ 보호소에 가장 먼저 들어온 동물은 한 마리인 경우만 테스트 케이스로 주어집니다.
 
 ## 코드
-> ```mysql
-> SELECT NAME
-> FROM ANIMAL_INS
-> ORDER BY DATETIME
-> LIMIT 1;
-> ```
-> - `LIMIT [행 개수]` : 행 개수를 제한하여 출력
+```mysql
+SELECT NAME
+FROM ANIMAL_INS
+ORDER BY DATETIME
+LIMIT 1;
+```
