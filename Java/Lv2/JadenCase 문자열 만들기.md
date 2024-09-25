@@ -16,15 +16,20 @@ JadenCase란 모든 단어의 첫 문자가 대문자이고, 그 외의 알파�
 ```java
 class Solution {
     public String solution(String s) {
+        // StringBuilder 객체 생성
+        // 기존 문자에 새로운 문자를 추가할 때, String은 매번 새로운 객체를 생성하기 때문에 성능이 좋지 않음. 이럴 때 StringBuilder를 사용하면 성능을 향상시킬 수 있음
         StringBuilder sb = new StringBuilder();
-        String[] arr = s.toLowerCase().split("");
-        sb.append(arr[0].toUpperCase());
+        
+        String[] arr = s.toLowerCase().split(""); // 문자열을 소문자로 변환 후 문자열 배열로 변환
+        sb.append(arr[0].toUpperCase()); // 첫 문자는 대문자로 sb에 추가
         
         for (int i = 1; i < arr.length; i++) {
+            // 이전 문자가 공백인 경우 대문자로 변환
             if (arr[i - 1].equals(" ")) {
                 arr[i] = arr[i].toUpperCase();
             }
-            sb.append(arr[i]);
+            
+            sb.append(arr[i]); // 문자 추가
         }
         
         return sb.toString();
