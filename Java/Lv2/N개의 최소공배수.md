@@ -12,13 +12,15 @@
 class Solution {
     public int solution(int[] arr) {
         int answer = 0;
-        int count = 1;
-        boolean isLcm = false;
+        int count = 1; // 배열의 최대값에 1씩 증가하는 값을 곱하면서 최소공배수를 찾기 위한 변수
+        boolean isLcm = false; // 최대공배수인지 아닌지 판별하는 boolean 변수
         
         while (answer == 0) {
-            int lcm = arr[arr.length - 1] * count;
+            int lcm = arr[arr.length - 1] * count; // 최소공배수 값
+            
+            // 반복문을 통해 최대값을 제외한 요소들을 lcm과 비교하여 lcm이 arr 요소들의 최소공배수인지 판별
             for (int i = 0; i < arr.length - 1; i++) {
-                isLcm = lcm % arr[i] == 0 ? true : false;
+                isLcm = lcm % arr[i] == 0 ? true : false; // 최소공배수를 배열의 각 요소로 나눈 나머지가 0이면 true, 아니면 false
                 
                 if (!isLcm) {
                     break;
